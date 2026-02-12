@@ -1,0 +1,112 @@
+plugins {
+    id 'maven-publish'
+}
+
+// 定义版本号 (JitPack 通常会忽略这个，以 Git Tag 为准，但写上是个好习惯)
+version = '1.0.0'
+// 定义 Group ID (JitPack 的标准格式是 com.github.用户名.仓库名)
+// 注意：如果你不写这个，JitPack 构建时可能会找不到
+group = 'com.github.guoqing12345.clx-lib-repo' 
+
+publishing {
+    publications {
+        
+        // --- 第 1 个 AAR 配置 ---
+        baseLib(MavenPublication) {
+            // 设置引用时的名字，例如：implementation '...:my-sdk-core:1.0.0'
+            artifactId = 'aliyun-base' 
+            
+            // 指定对应的 aar 文件路径
+            artifact("libs/aliyun-base-2.3.39.250815155912.aar")
+            
+            // (可选) 如果这个 aar 依赖了其他第三方库，需要在这里手动写 pom 依赖，见文末说明
+        }
+
+        // --- 第 2 个 AAR 配置 ---
+        facadeLib(MavenPublication) {
+            // 设置引用时的名字，例如：implementation '...:my-sdk-ui:1.0.0'
+            artifactId = 'aliyun-facade'
+            
+            // 指定对应的 aar 文件路径
+            artifact("libs/aliyun-facade-2.3.39.250815155912.aar")
+        }
+
+        faceLib(MavenPublication) {
+            // 设置引用时的名字，例如：implementation '...:my-sdk-ui:1.0.0'
+            artifactId = 'aliyun-face'
+            
+            // 指定对应的 aar 文件路径
+            artifact("libs/aliyun-face-2.3.39.250815155912.aar")
+        }
+
+        faceAudioLib(MavenPublication) {
+            // 设置引用时的名字，例如：implementation '...:my-sdk-ui:1.0.0'
+            artifactId = 'aliyun-faceaudio'
+            
+            // 指定对应的 aar 文件路径
+            artifact("libs/aliyun-faceaudio-2.3.39.250815155912.aar")
+        }
+
+        faceLanguageLib(MavenPublication) {
+            // 设置引用时的名字，例如：implementation '...:my-sdk-ui:1.0.0'
+            artifactId = 'aliyun-facelanguage'
+            
+            // 指定对应的 aar 文件路径
+            artifact("libs/aliyun-facelanguage-2.3.39.250815155912.aar")
+        }
+
+        faceQualityLib(MavenPublication) {
+            // 设置引用时的名字，例如：implementation '...:my-sdk-ui:1.0.0'
+            artifactId = 'aliyun-facequality'
+            
+            // 指定对应的 aar 文件路径
+            artifact("libs/aliyun-facequality-2.3.39.250815155912.aar")
+        }
+
+        nfcLib(MavenPublication) {
+            // 设置引用时的名字，例如：implementation '...:my-sdk-ui:1.0.0'
+            artifactId = 'aliyun-nfc'
+            
+            // 指定对应的 aar 文件路径
+            artifact("libs/aliyun-nfc-2.3.39.250815155912.aar")
+        }
+
+        ocrLib(MavenPublication) {
+            // 设置引用时的名字，例如：implementation '...:my-sdk-ui:1.0.0'
+            artifactId = 'aliyun-ocr'
+            
+            // 指定对应的 aar 文件路径
+            artifact("libs/aliyun-ocr-2.3.39.250815155912.aar")
+        }
+
+        wishverifyLib(MavenPublication) {
+            // 设置引用时的名字，例如：implementation '...:my-sdk-ui:1.0.0'
+            artifactId = 'aliyun-wishverify'
+            
+            // 指定对应的 aar 文件路径
+            artifact("libs/aliyun-wishverify-2.3.39.250815155912.aar")
+        }
+
+        androidAliyunFaceGuardLib(MavenPublication) {
+            // 设置引用时的名字，例如：implementation '...:my-sdk-ui:1.0.0'
+            artifactId = 'Android-AliyunFaceGuard'
+            
+            // 指定对应的 aar 文件路径
+            artifact("libs/Android-AliyunFaceGuard-10056.1.aar")
+        }
+
+        aPSecuritySDKDeepSecLib(MavenPublication) {
+            // 设置引用时的名字，例如：implementation '...:my-sdk-ui:1.0.0'
+            artifactId = 'APSecuritySDK-deepSec'
+            
+            // 指定对应的 aar 文件路径
+            artifact("libs/APSecuritySDK-deepSec-7.0.1.20250411.jiagu.aar")
+        }
+        
+        
+        
+        
+
+
+    
+}
